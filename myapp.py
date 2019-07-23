@@ -9,8 +9,6 @@ from flask_login import LoginManager, UserMixin, login_user, login_required, log
 import RPi.GPIO as GPIO
 from flask import Flask, render_template, request
 
-
-app = Flask(__name__)
 GPIO.setmode(GPIO.BCM)
 GPIO.setwarnings(False)
 
@@ -30,6 +28,7 @@ GPIO.output(ledRed, GPIO.LOW)
 GPIO.output(ledYellow, GPIO.LOW)
 GPIO.output(ledGreen, GPIO.LOW)
 
+app = Flask(__name__)
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True
 app.config['SECRET_KEY'] = 'Thisisgroup3secretkey'
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:////home/pi/Desktop/Pi-JED/database.db'
