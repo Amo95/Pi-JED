@@ -5,5 +5,4 @@ Flask-WTF==0.14.2
 Werkzeug==0.14.1
 WTForms==2.2.1
 Flask-SQLAlchemy==2.4.0
-RPi.GPIO==0.5.11
 Flask-Login==0.4.1
