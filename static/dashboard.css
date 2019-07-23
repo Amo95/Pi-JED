@@ -1,0 +1,66 @@
+body {
+	position: relative;
+	text-align: center;
+	background-color: #691510;
+	color: #fff5ee;
+}
+.button {
+	font: bold 20px Arial;
+	background-color:#EEEEEE;
+	padding: 1px;
+	border: 1px solid #CCCCCC;
+}
+.buzzer .button{
+		font-size: 30px;
+     } 
+    
+
+.button {
+    display: inline-block;
+    padding: 15px 25px;
+    font-size: 24px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #red;
+    background-color: #4CAF50;
+    border:none;
+    border-radius: 15px;
+    box-shadow: 0 2px #999;
+    }
+    
+.button:hover {background-color: #3e8e41}
+
+.button:active {
+    background-color: #3e8e41;
+    box-shadow: 0 2px #666;
+    transform: translateY(4px);
+    }
+    
+.topnav {
+    overflow: hidden;
+    background-color: #333;    
+    }
+    
+.topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    }
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+    }
+    
+.topnav a.active {
+    background-color: #4CAF50;
+    color: white;
+    }
+    
+topnav img.navbar{
+	text-align: right;
+	}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            <title>Dashboard</title>
+            <link rel="stylesheet" href="{{url_for('.static', filename='dashboard.css')}}">
+        </head>
+
+    <body>
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container-fluid">
+              <div>
+                <a href="/"><img class="navbar" src="{{ url_for('static', filename='pi.png') }}" alt="25" width="110" height="48" align="right"></a>
+              </div>
+                <div class="topnav">
+                      <a class="active" href="/dashboard">Dashboard</a>
+                      <a href="#">Profile</a>
+                      <a href="{{ url_for('logout') }}"><b>Log Out</a>
+                      <!-- <form class="navbar-form navbar-right">
+                        <input type="text" class="form-control" placeholder="Search...">
+                      </form> -->
+                </div>
+            <div>
+                <style type="text/css">overflow:auto;</style>
+               <!-- <img src="/static/pi.png" width="50px" height="50px" alt="Pi-JED"> -->
+                <h1>Status</h1>
+                <h3> LED ONE: &nbsp {{ledRed}}</h3>
+                <h3> LED TWO: &nbsp {{ledYellow}}</h3>
+                <h3> BUZZER &nbsp: &nbsp {{ledGreen}}</h3><br>
+                <h1>IOT Controller Board</h1>
+                <h3> LED 1 control: &nbsp <a href ="/ledRed/on" class="button"> &nbsp ON &nbsp</a> <a href="/ledRed/off" class = "button"> &nbsp OFF &nbsp </a></h3>
+                <h3> LED 2 control: &nbsp <a href="/ledYellow/on" class="button"> &nbsp ON &nbsp </a> <a href="/ledYellow/off" class="button"> &nbsp OFF &nbsp </a></h3>
+                <h3> BUZZER: &nbsp &nbsp &nbsp &nbsp &nbsp <a href="/ledGreen/on" class="button buzzer"> &nbsp ON &nbsp</a> <a href="/ledGreen/off" class="button"> &nbsp OFF &nbsp </a></h3>
+            </div>
+        </nav>
+        
+    </body>
+</html>
