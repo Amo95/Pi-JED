@@ -6,9 +6,8 @@ from wtforms.validators import InputRequired, Email, Length
 from flask_sqlalchemy  import SQLAlchemy
 from werkzeug.security import generate_password_hash, check_password_hash
 from flask_login import LoginManager, UserMixin, login_user, login_required, logout_user, current_user
-import RPi.GPIO as GPIO
 from flask import Flask, render_template, request
-
+import RPi.GPIO as GPIO
 
 app = Flask(__name__)
 GPIO.setmode(GPIO.BCM)
@@ -60,6 +59,7 @@ class RegisterForm(FlaskForm):
     password = PasswordField('password', validators=[InputRequired(), Length(min=8, max=80)])
 
 
+
 @app.route('/')
 def index():
     return render_template('index.html')
@@ -95,6 +95,9 @@ def signup():
 
     return render_template('signup.html', form=form)
 
+
+
+
 @app.route('/dashboard')
 @login_required
 def dashboard():
@@ -115,21 +118,17 @@ def do(deviceName, action):
         actuator = ledRed
     if deviceName == "ledYellow":
         actuator = ledYellow
-    if deviceName == "ledGreen":
-        actuator = ledGreen
 
     if action == "on":
         GPIO.output(actuator, GPIO.HIGH)
     if action == "off":
         GPIO.output(actuator, GPIO.LOW)
 
-    ledRedSts = GPIO.input(ledRed)
-    ledYellowSts = GPIO.input(ledYellow)
-    ledGreenSts = GPIO.input(ledGreen)
-
-    templateData = { 'ledRed' : ledRedSts,
-    'ledYellow' : ledYellowSts,
-    'ledGreen' : ledGreenSts }
+    f_led = GPIO.input(ledRed)
+    s_led = GPIO.input(ledYellow)
+   
+    templateData = { 'ledRed' : f_led,
+    'ledYellow' : s_led}
 
     return render_template('dashboard.html', **templateData )
 

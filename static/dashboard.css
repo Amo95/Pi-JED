@@ -3,11 +3,13 @@ body {
 	text-align: center;
 	background-color: #691510;
 	color: #fff5ee;
+	line-height: 24px;
+	font-size: 16;
 }
 .button {
-	font: bold 20px Arial;
+	font: bold 24 Arial;
 	background-color:#EEEEEE;
-	padding: 1px;
+	padding: 30px 30px 20px;
 	border: 1px solid #CCCCCC;
 }
 .buzzer .button{
@@ -17,7 +19,7 @@ body {
 
 .button {
     display: inline-block;
-    padding: 15px 25px;
+    padding: 30px 30px 20px;
     font-size: 24px;
     cursor: pointer;
     text-align: center;
@@ -47,7 +49,7 @@ body {
     float: left;
     color: #f2f2f2;
     text-align: center;
-    padding: 14px 16px;
+    padding: 30px 30px 20px;
     text-decoration: none;
     font-size: 17px;
     }
