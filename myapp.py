@@ -17,10 +17,11 @@ led1 = 13
 led2= 19
 buzzer= 26
 
-if led1Sts = 0:
-    print("On")
+led1Sts = 0
+if led1Sts:
+    print("Off")
     else:
-        print("Off");
+        print("On");
 led2Sts = 0
 buzzer1 = 0
 
