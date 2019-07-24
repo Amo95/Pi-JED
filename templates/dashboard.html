@@ -29,7 +29,17 @@
                 <h3> LED TWO: &nbsp {{ledYellow}}</h3>
                 <h3> BUZZER &nbsp: &nbsp {{ledGreen}}</h3><br>
                 <h1>IOT Controller Board</h1>
-                <input checked data-toggle="toggle" type="checkbox" class="button" onclick="location.href='/ledRed/on';" onclick="location.href='/ledRed/off';"/>
+                <input id="toggle-trigger" data-toggle="toggle" data-onstyle="success" data-offstyle="danger" data-width="100" data-height="75" type="checkbox">
+                <button class="btn btn-success" onclick="toggleOnByInput()">On by Input</button>
+                <button class="btn btn-danger" onclick="toggleOffByInput()">Off by Input</button>
+                  <script>
+                    function toggleOnByInput() {
+                              $('/ledRed/on').prop('checked', true).change()
+                            }
+                            function toggleOffByInput() {
+                              $('/ledRed/off').prop('checked', false).change()
+                            }
+                  </script>
                 <!-- <h3> LED 1: &nbsp <a href ="/ledRed/on" class="button"> &nbsp ON &nbsp</a> <a href="/ledRed/off" class = "button"> &nbsp OFF &nbsp </a></h3> -->
                 <h3> LED 2 control: &nbsp <a href="/ledYellow/on" class="button"> &nbsp ON &nbsp </a> <a href="/ledYellow/off" class="button"> &nbsp OFF &nbsp </a></h3>
                 <h3> BUZZER: &nbsp &nbsp &nbsp &nbsp &nbsp <a href="/ledGreen/on" class="button buzzer"> &nbsp ON &nbsp</a> <a href="/ledGreen/off" class="button"> &nbsp OFF &nbsp </a></h3>
