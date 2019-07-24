@@ -15,19 +15,19 @@ GPIO.setwarnings(False)
 
 ledRed = 13
 ledYellow= 19
-ledGreen= 26
+buzzer= 26
 
 ledRedSts = 0
 ledYellowSts = 0
-ledGreenSts = 0
+buzzer1 = 0
 
 GPIO.setup(ledRed, GPIO.OUT)
 GPIO.setup(ledYellow,GPIO.OUT)
-GPIO.setup(ledGreen, GPIO.OUT)
+GPIO.setup(buzzer, GPIO.OUT)
 
 GPIO.output(ledRed, GPIO.LOW)
 GPIO.output(ledYellow, GPIO.LOW)
-GPIO.output(ledGreen, GPIO.LOW)
+GPIO.output(buzzer, GPIO.LOW)
 
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True
 app.config['SECRET_KEY'] = 'Thisisgroup3secretkey'
@@ -103,11 +103,11 @@ def signup():
 def dashboard():
         ledRedSts = GPIO.input(ledRed)
         ledYellowSts = GPIO.input(ledYellow)
-        ledGreenSts = GPIO.input(ledGreen)
+        buzzer1 = GPIO.input(buzzer)
    
         templateData = { 'ledRed' : ledRedSts,
         'ledYellow' : ledYellowSts,
-        'ledGreen' : ledGreenSts }
+        'buzzer' : buzzer1 }
    
         return render_template('dashboard.html', **templateData)
         return render_template('dashboard.html', name=current_user.username)
@@ -118,6 +118,8 @@ def do(deviceName, action):
         actuator = ledRed
     if deviceName == "ledYellow":
         actuator = ledYellow
+    if deviceName == "buzzer":
+        actuator = buzzer
 
     if action == "on":
         GPIO.output(actuator, GPIO.HIGH)
@@ -126,9 +128,10 @@ def do(deviceName, action):
 
     f_led = GPIO.input(ledRed)
     s_led = GPIO.input(ledYellow)
+    buzz = GPIO.input(buzzer)
    
     templateData = { 'ledRed' : f_led,
-    'ledYellow' : s_led}
+    'ledYellow' : s_led, 'buzzer': buzz}
 
     return render_template('dashboard.html', **templateData )
 
