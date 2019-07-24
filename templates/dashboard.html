@@ -2,6 +2,8 @@
     <html>
         <head>
             <title>Dashboard</title>
+            <link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
+            <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
             <link rel="stylesheet" href="{{url_for('.static', filename='dashboard.css')}}">
         </head>
 
@@ -27,7 +29,7 @@
                 <h3> LED TWO: &nbsp {{ledYellow}}</h3>
                 <h3> BUZZER &nbsp: &nbsp {{ledGreen}}</h3><br>
                 <h1>IOT Controller Board</h1>
-                <h3> LED 1 control: &nbsp <a href ="/ledRed/on" class="button"> &nbsp ON &nbsp</a> <a href="/ledRed/off" class = "button"> &nbsp OFF &nbsp </a></h3>
+                <h3> LED 1: &nbsp <a href ="/ledRed/on" class="button"> &nbsp ON &nbsp</a> <a href="/ledRed/off" class = "button"> &nbsp OFF &nbsp </a></h3>
                 <h3> LED 2 control: &nbsp <a href="/ledYellow/on" class="button"> &nbsp ON &nbsp </a> <a href="/ledYellow/off" class="button"> &nbsp OFF &nbsp </a></h3>
                 <h3> BUZZER: &nbsp &nbsp &nbsp &nbsp &nbsp <a href="/ledGreen/on" class="button buzzer"> &nbsp ON &nbsp</a> <a href="/ledGreen/off" class="button"> &nbsp OFF &nbsp </a></h3>
             </div>
