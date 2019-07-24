@@ -13,20 +13,20 @@ app = Flask(__name__)
 GPIO.setmode(GPIO.BCM)
 GPIO.setwarnings(False)
 
-ledRed = 13
-ledYellow= 19
+led1 = 13
+led2= 19
 buzzer= 26
 
-ledRedSts = 0
-ledYellowSts = 0
+led1Sts = 0
+led2Sts = 0
 buzzer1 = 0
 
-GPIO.setup(ledRed, GPIO.OUT)
-GPIO.setup(ledYellow,GPIO.OUT)
+GPIO.setup(led1, GPIO.OUT)
+GPIO.setup(led2,GPIO.OUT)
 GPIO.setup(buzzer, GPIO.OUT)
 
-GPIO.output(ledRed, GPIO.LOW)
-GPIO.output(ledYellow, GPIO.LOW)
+GPIO.output(led1, GPIO.LOW)
+GPIO.output(led2, GPIO.LOW)
 GPIO.output(buzzer, GPIO.LOW)
 
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True
@@ -101,12 +101,12 @@ def signup():
 @app.route('/dashboard')
 @login_required
 def dashboard():
-        ledRedSts = GPIO.input(ledRed)
-        ledYellowSts = GPIO.input(ledYellow)
+        led1Sts = GPIO.input(led1)
+        led2Sts = GPIO.input(led2)
         buzzer1 = GPIO.input(buzzer)
    
-        templateData = { 'ledRed' : ledRedSts,
-        'ledYellow' : ledYellowSts,
+        templateData = { 'led1' : led1Sts,
+        'led2' : led2Sts,
         'buzzer' : buzzer1 }
    
         return render_template('dashboard.html', **templateData)
@@ -114,10 +114,10 @@ def dashboard():
 
 @app.route('/<deviceName>/<action>')
 def do(deviceName, action):
-    if deviceName == "ledRed":
-        actuator = ledRed
-    if deviceName == "ledYellow":
-        actuator = ledYellow
+    if deviceName == "led1":
+        actuator = led1
+    if deviceName == "led2":
+        actuator = led2
     if deviceName == "buzzer":
         actuator = buzzer
 
@@ -126,12 +126,12 @@ def do(deviceName, action):
     if action == "off":
         GPIO.output(actuator, GPIO.LOW)
 
-    f_led = GPIO.input(ledRed)
-    s_led = GPIO.input(ledYellow)
+    f_led = GPIO.input(led1)
+    s_led = GPIO.input(led2)
     buzz = GPIO.input(buzzer)
    
-    templateData = { 'ledRed' : f_led,
-    'ledYellow' : s_led, 'buzzer': buzz}
+    templateData = { 'led1' : f_led,
+    'led2' : s_led, 'buzzer': buzz}
 
     return render_template('dashboard.html', **templateData )
 
