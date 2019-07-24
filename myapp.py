@@ -17,9 +17,9 @@ led1 = 13
 led2= 19
 buzzer= 26
 
-led1Sts = 0
-led2Sts = 0
-buzzer1 = 0
+led1Sts = on
+led2Sts = on
+buzzer1 = on
 
 GPIO.setup(led1, GPIO.OUT)
 GPIO.setup(led2,GPIO.OUT)
