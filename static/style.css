@@ -1,4 +1,13 @@
 @import url('https://fonts.googleapis.com/css?family=Bad+Script');
+html, body{
+	height:100%;
+}
+
+html{
+	display: table;
+	margin: auto;
+}
+
 h1{
 	color: #FFD700;
 	margin: auto;
@@ -8,24 +17,26 @@ h1{
 body{
 	margin: 0;
 	padding: 0;
-	display: flex;
+	display: table-cell;
+	vertical-align: middle;
 	justify-content: center;
 	align-items: center;
 	height: 100vh;
 	background: #000;
-	overflow-wrap: normal;
 	/*font-family: 'Bad Script', cursive;*/
 }
 
 h2{
-	margin: 0;
+	margin: auto;
 	padding: 0;
+	justify-content: center;
+	vertical-align: middle;
 	color: #111;
-	font-size: 12em;
+	font-size: 5em;
 }
 
 h2 span{
-	display: table-cell;
+	display: auto;
 	margin: 0;
 	padding: 0;
 	animation: animate 4s linear infinite;

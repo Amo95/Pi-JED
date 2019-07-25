@@ -7,6 +7,19 @@ body {
 	font-size: 16;
 }
 
+.container{
+    width: 80%;
+    margin: 0 auto;
+    }
+
+header {
+    background: #4CAF50;
+    }
+    
+.navbar {
+    float: left;
+    }
+
 .button {
 	font: bold 24 Arial;
 	background-color:#EEEEEE;

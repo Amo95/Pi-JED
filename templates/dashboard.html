@@ -4,27 +4,25 @@
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <title>Dashboard</title>
             <link rel="stylesheet" href="{{url_for('.static', filename='dashboard.css')}}">
-            <link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
-            <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
         </head>
 
     <body>
     <nav class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container-fluid">
-            <div>
-                <div class="topnav">                      
-                    <a href="{{ url_for('logout') }}"><b>Log Out</a>
-                </div>
+        <div class="container">
                 <div>
                     <a href="/"><img class="navbar" src="{{ url_for('static', filename='pi.png') }}" alt="25" width="110" height="48" align="right"></a>
                 </div>
-          
+	<nav>
+          <ul>
+		<li><a href="{{ url_for('logout') }}"><b>Log Out</a><li>
+	  </ul>
         </div>
     
             <div>
                 <style type="text/css">overflow:auto;</style>
                <!-- <img src="/static/pi.png" width="50px" height="50px" alt="Phttp://05d21c34.ngrok.io/ledYellow/oni-JED"> -->
-                <h1>STATUS</h1>
+                
+                <h1>&nbspSTATUS</h1>
                     {% if led1 == 1 %}
                       <h3> LED ONE: &nbsp ON</h3>
                     {% else %}  
@@ -56,7 +54,7 @@
                 </div>
                 
                 <div>
-                    <h3> LED 1 control: <h3>
+                    <h3> LED 2 control: <h3>
                         {% if led2 == 1 %}
                             <a href ="/led2/off" class="button">OFF</a> 
                         {% else %}    

@@ -8,7 +8,6 @@ from werkzeug.security import generate_password_hash, check_password_hash
 from flask_login import LoginManager, UserMixin, login_user, login_required, logout_user, current_user
 from flask import Flask, render_template, request
 import RPi.GPIO as GPIO
-#import json
 
 app = Flask(__name__)
 GPIO.setmode(GPIO.BCM)
@@ -26,7 +25,7 @@ GPIO.setup(led1, GPIO.OUT)
 GPIO.setup(led2,GPIO.OUT)
 GPIO.setup(buzzer, GPIO.OUT)
 
-GPIO.output(led1, GPIO.LOW)
+
 GPIO.output(led2, GPIO.LOW)
 GPIO.output(buzzer, GPIO.LOW)
 
@@ -113,6 +112,12 @@ def dashboard():
         return render_template('dashboard.html', **templateData)
         return render_template('dashboard.html', name=current_user.username)
 
+@app.route('/led_on')
+def led_on():
+    led1 = 13
+    GPIO.setup(led1, GPIO.OUT)
+    GPIO.output(led1, GPIO.HIGH)
+    
 @app.route('/<deviceName>/<action>')
 def do(deviceName, action):
     if deviceName == "led1":
