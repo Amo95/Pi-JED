@@ -21,72 +21,37 @@ body {
     padding: 0;
 }
 
-
-.nav ul {
-  list-style: none;
-  background-color: #444;
-  text-align: center;
-  padding: 0;
+.menu,
+.sub-menu {
   margin: 0;
-}
-.nav li {
-  font-family: 'Oswald', sans-serif;
-  font-size: 1.2em;
-  line-height: 40px;
-  height: 40px;
-  border-bottom: 1px solid #888;
-}
- 
-.nav a {
-  text-decoration: none;
-  color: #fff;
-  display: block;
-  transition: .3s background-color;
-}
- 
-.nav a:hover {
-  background-color: #005f5f;
-}
- 
-.nav a.active {
-  background-color: #fff;
-  color: #444;
-  cursor: default;
-}
- 
-@media screen and (min-width: 600px) {
-  .nav li {
-    width: 120px;
-    border-bottom: none;
-    height: 50px;
-    line-height: 50px;
-    font-size: 1.4em;
+  padding: 0;
+  li {
+    margin: 0;
   }
- 
-  .nav li {
-    float: left;
-  }
-  .nav ul {
-    overflow: auto;
-    width: 600px;
-    margin: 0 auto;
-  }
-  .nav {
-    background-color: #444;
-  }
+}
 
-.container{
-    width: 80%;
-    margin: 0 auto;
+
+.navigation {
+  line-height: 1; /* 1 */
+  .menu {
+    a,
+    li {
+      display: block; /* 2 */
     }
 
-header {
-    background: #4CAF50;
+    a {
+      text-decoration: none; /* 3 */
+      color: currentColor; /* 4 */
+      padding: 1em; /* 5 */
     }
-    
-.navbar {
-    float: left;
+
+    li {
+      border-style: solid; /* 6 */
+      border-width: 0 0 1px;
     }
+  }
+}
+
 
 .button {
 	font: bold 24 Arial;
