@@ -86,7 +86,7 @@ header {
     color: white;
     }
     
-topnav img.navbar{
+.topnav img.navbar{
 	text-align: right;
 	}
 /* new div that wraps nav and logo
