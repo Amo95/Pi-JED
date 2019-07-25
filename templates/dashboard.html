@@ -1,32 +1,33 @@
 <!DOCTYPE html>
     <html>
         <head>
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <title>Dashboard</title>
+            <meta name="viewport" content="width=device-width, initial-scale=1">
             <link rel="stylesheet" href="{{url_for('static', filename='dashboard.css')}}">
+            <script type="text/javascript" src="{{url_for('static', filename=dashboard.js"></script>
         </head>
-
-    <body>
-    <!-- <nav class="navbar navbar-inverse navbar-fixed-top"> -->
-        <!-- <div class="container">
-                <div>
-                    <a href="/"><img class="navbar" src="{{ url_for('static', filename='pi.png') }}" alt="25" width="110" height="48" align="right"></a>
-                </div>
-                <div>
-                    <a href="{{ url_for('logout') }}"><b>Log Out</a>
-                </div>
-        </div>
-     -->
-                    <nav class="navigation">
-                        <ul class="menu">
-                            <!-- <a href="/"><img class="navbar" src="{{ url_for('static', filename='pi.png') }}" alt="25" width="110" height="48" align="right"></a> -->
-                            <li class="logout"><a href="{{ url_for('index') }}"><b>Home</a></li>
-                            <li class="logout"><a href="{{ url_for('logout') }}"><b>Log Out</a></li>
-                        </ul>
-                    </nav>
-            <div>
-                <style type="text/css">overflow:auto;</style>
-               <!-- <img src="/static/pi.png" width="50px" height="50px" alt="Phttp://05d21c34.ngrok.io/ledYellow/oni-JED"> -->
+        <body>
+            <div id="header">
+            <div id="logo"><img src="ResponsiveNavigationBar/pi.png"/></div>
+            <div id="res_btn" onclick="show_hide_nav('navbar')" ><img src="ResponsiveNavigationBar/button.png"/></div>
+                <ul id="navbar">
+                    <li><a href="{{ url_for('index') }}">Home</a></li>
+                    <li><a href="{{ url_for('logout') }}">Logout</a></li>
+                </ul>
+            </div>
+                <!-- <nav class="navbar navbar-inverse navbar-fixed-top"> -->
+                    <!-- <div class="container">
+                            <div>
+                                <a href="/"><img class="navbar" src="{{ url_for('static', filename='pi.png') }}" alt="25" width="110" height="48" align="right"></a>
+                            </div>
+                            <div>
+                                <a href="{{ url_for('logout') }}"><b>Log Out</a>
+                            </div>
+                    </div>
+                 -->
+                 <!-- <a href="/"><img class="navbar" src="{{ url_for('static', filename='pi.png') }}" alt="25" width="110" height="48" align="right"></a> -->
+                           <!-- <style type="text/css">overflow:auto;</style> -->
+                           <!-- <img src="/static/pi.png" width="50px" height="50px" alt="Phttp://05d21c34.ngrok.io/ledYellow/oni-JED"> -->
                 
                 <h1>&nbspSTATUS</h1>
                     {% if led1 == 1 %}
@@ -49,9 +50,9 @@
                         <h3> BUZZER: &nbsp OFF</h3>
   
                     {% endif %}
-                <h1>IOT Controller Board</h>
+                <h1>IOT Controller Board</h1>
                 <div>
-                    <h3> LED 1 control: <h3>
+                    <h3> LED 1 control: </h3>
                         {% if led1 == 1 %}
                             <a href ="/led1/off" class="button">OFF</a> 
                         {% else %}    
@@ -60,7 +61,7 @@
                 </div>
                 
                 <div>
-                    <h3> LED 2 control: <h3>
+                    <h3> LED 2 control: </h3>
                         {% if led2 == 1 %}
                             <a href ="/led2/off" class="button">OFF</a> 
                         {% else %}    
@@ -69,15 +70,13 @@
                 </div>
                 
                 <div>
-                    <h3> BUZZER control: <h3>
+                    <h3> BUZZER control: </h3>
                         {% if buzzer == 1 %}
                             <a href ="/buzzer/off" class="button">OFF</a> 
                         {% else %}    
                             <a href ="/buzzer/on" class="button">ON</a> 
                         {% endif %}
                 </div>
-                
-            </div>
         
-    </body>
-</html>
+        </body>
+    </html>
