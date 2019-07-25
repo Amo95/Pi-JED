@@ -9,29 +9,70 @@
         </head>
 
     <body>
-        <nav class="navbar navbar-inverse navbar-fixed-top">
-            <div class="container-fluid">
-              <div>
-                <a href="/"><img class="navbar" src="{{ url_for('static', filename='pi.png') }}" alt="25" width="110" height="48" align="right"></a>
-              </div>
-                <div class="topnav">
-                      
-                      <a href="{{ url_for('logout') }}"><b>Log Out</a>
-                      <!-- <form class="navbar-form navbar-right">
-                        <input type="text" class="form-control" placeholder="Search...">
-                      </form> -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div>
+                <div class="topnav">                      
+                    <a href="{{ url_for('logout') }}"><b>Log Out</a>
                 </div>
+                <div>
+                    <a href="/"><img class="navbar" src="{{ url_for('static', filename='pi.png') }}" alt="25" width="110" height="48" align="right"></a>
+                </div>
+          
+        </div>
+    
             <div>
                 <style type="text/css">overflow:auto;</style>
                <!-- <img src="/static/pi.png" width="50px" height="50px" alt="Phttp://05d21c34.ngrok.io/ledYellow/oni-JED"> -->
-                <h1>Status</h1>
-                <h3> LED ONE: &nbsp {{led1}}</h3>
-                <h3> LED TWO: &nbsp {{led2}}</h3>
-                <h3> BUZZER &nbsp: &nbsp {{buzzer}}</h3><br>
+                <h1>STATUS</h1>
+                    {% if led1 == 1 %}
+                      <h3> LED ONE: &nbsp ON</h3>
+                    {% else %}  
+                        <h3> LED ONE: &nbsp OFF</h3>
+  
+                    {% endif %}
+                    {% if led2 == 1 %}
+                      <h3> LED TWO: &nbsp ON</h3>
+                    {% else %}  
+                        <h3> LED TWO: &nbsp OFF</h3>
+  
+                    {% endif %}
+                    
+                    
+                    {% if buzzer == 1 %}
+                      <h3> BUZZER: &nbsp ON</h3>
+                    {% else %}  
+                        <h3> BUZZER: &nbsp OFF</h3>
+  
+                    {% endif %}
                 <h1>IOT Controller Board</h>
-                <h3> LED 1 control: &nbsp <a href ="/led1/on" class="button"> &nbsp ON &nbsp</a> <a href="/led1/off" class = "button"> &nbsp OFF &nbsp </a></h3>
-                <h3> LED 2 control: &nbsp <a href="/led2/on" class="button"> &nbsp ON &nbsp </a> <a href="/led2/off" class="button"> &nbsp OFF &nbsp </a></h3>
-                <h3> BUZZER: &nbsp &nbsp &nbsp &nbsp &nbsp <a href="/buzzer/on" class="button"> &nbsp ON &nbsp</a> <a href="/buzzer/off" class="button"> &nbsp OFF &nbsp </a></h3>
+                <div>
+                    <h3> LED 1 control: <h3>
+                        {% if led1 == 1 %}
+                            <a href ="/led1/off" class="button">OFF</a> 
+                        {% else %}    
+                            <a href ="/led1/on" class="button">ON</a> 
+                        {% endif %}
+                </div>
+                
+                <div>
+                    <h3> LED 1 control: <h3>
+                        {% if led2 == 1 %}
+                            <a href ="/led2/off" class="button">OFF</a> 
+                        {% else %}    
+                            <a href ="/led2/on" class="button">ON</a> 
+                        {% endif %}
+                </div>
+                
+                <div>
+                    <h3> BUZZER control: <h3>
+                        {% if buzzer == 1 %}
+                            <a href ="/buzzer/off" class="button">OFF</a> 
+                        {% else %}    
+                            <a href ="/buzzer/on" class="button">ON</a> 
+                        {% endif %}
+                </div>
+                
             </div>
         </nav>
         

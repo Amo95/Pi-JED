@@ -47,12 +47,11 @@ body {
     }
     
 .topnav a {
-    float: left;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 30px 30px 20px;
-    text-decoration: none;
-    font-size: 17px;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px 94px 20px;
     }
 .topnav a:hover {
     background-color: #ddd;
@@ -67,3 +66,10 @@ body {
 topnav img.navbar{
 	text-align: right;
 	}
+/* new div that wraps nav and logo
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    * 
+    padding on top nav: 20px 94px 20px;
+*/
