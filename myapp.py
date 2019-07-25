@@ -90,7 +90,7 @@ def signup():
         db.session.add(new_user)
         db.session.commit()
 
-        return '<h3>you have successfully signup. Click on <a href="/login">Login</a> to sign in</h3>'
+        return '/login'
         return '<h1>' + form.username.data + ' ' + form.email.data + ' ' + form.password.data + '</h1>'
 
     return render_template('signup.html', form=form)
