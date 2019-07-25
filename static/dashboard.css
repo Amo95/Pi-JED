@@ -7,6 +7,16 @@ body {
 	font-size: 16;
 }
 
+.navbar-inverse {
+    background-color: #222;
+    border-color: #080808;
+}
+
+.navbar-fixed-top {
+    top: 0;
+    border-width: 0 0 1px;
+}
+
 .container{
     width: 80%;
     margin: 0 auto;
