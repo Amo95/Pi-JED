@@ -8,7 +8,7 @@
 
     <body>
     <nav class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
+        <!-- <div class="container">
                 <div>
                     <a href="/"><img class="navbar" src="{{ url_for('static', filename='pi.png') }}" alt="25" width="110" height="48" align="right"></a>
                 </div>
@@ -16,7 +16,17 @@
                     <a href="{{ url_for('logout') }}"><b>Log Out</a>
                 </div>
         </div>
-    
+     -->
+            <header>
+                    <div class="nav">
+                        <ul>
+                            <li class="logout"><a href="{{ url_for('logout') }}"><b>Log Out</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <a href="/"><img class="navbar" src="{{ url_for('static', filename='pi.png') }}" alt="25" width="110" height="48" align="right"></a>
+                    </div>
+            </header>
             <div>
                 <style type="text/css">overflow:auto;</style>
                <!-- <img src="/static/pi.png" width="50px" height="50px" alt="Phttp://05d21c34.ngrok.io/ledYellow/oni-JED"> -->
