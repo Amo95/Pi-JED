@@ -109,7 +109,7 @@ def dashboard():
         'led2' : led2Sts,
         'buzzer' : buzzer1 }
    
-        #return render_template('dashboard.html', **templateData)
+        return render_template('dashboard.html', **templateData)
         return render_template('dashboard.html', name=current_user.username)
 
 @app.route('/led_on')
