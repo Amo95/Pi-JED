@@ -18,10 +18,6 @@ led2= 19
 buzzer= 26
 
 led1Sts = 0
-if led1Sts:
-    print("Off")
-else:
-    print("On");
 led2Sts = 0
 buzzer1 = 0
 
@@ -94,7 +90,7 @@ def signup():
         db.session.add(new_user)
         db.session.commit()
 
-        return '<h1>New user has been created!</h1>'
+        return '<a href="{{ url_for('login') }}">Login</a>'
         return '<h1>' + form.username.data + ' ' + form.email.data + ' ' + form.password.data + '</h1>'
 
     return render_template('signup.html', form=form)
