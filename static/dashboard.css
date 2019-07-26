@@ -5,6 +5,9 @@
 body{
     background: skyblue;
     text-align: center;
+    display: table-cell;
+    vertical-align: middle;
+    position: relative;
 }
 
 .container {
