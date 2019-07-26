@@ -32,29 +32,29 @@
                 <div class="stats">
                     <h1>&nbspSTATUS</h1>
                         {% if led1 == 1 %}
-                          <h3> LED ONE: &nbsp ON</h3>
+                          <p> LED ONE: &nbsp ON</p>
                         {% else %}  
-                            <h3> LED ONE: &nbsp OFF</h3>
+                            <p> LED ONE: &nbsp OFF</p>
       
                         {% endif %}
                         {% if led2 == 1 %}
-                          <h3> LED TWO: &nbsp ON</h3>
+                          <p> LED TWO: &nbsp ON</p>
                         {% else %}  
-                            <h3> LED TWO: &nbsp OFF</h3>
+                            <p> LED TWO: &nbsp OFF</p>
       
                         {% endif %}
                         
                         
                         {% if buzzer == 1 %}
-                          <h3> BUZZER: &nbsp ON</h3>
+                          <p> BUZZER: &nbsp ON</p>
                         {% else %}  
-                            <h3> BUZZER: &nbsp OFF</h3>
+                            <p> BUZZER: &nbsp OFF</p>
       
                         {% endif %}
                 </div>
                 <div>
                     <h1>IOT Controller Board</h1>
-                        <h3> LED 1 control: </h3>
+                        <p> LED 1 control: </p>
                             {% if led1 == 1 %}
                                 <a href ="/led1/off" class="button">OFF</a> 
                             {% else %}    
@@ -63,7 +63,7 @@
                     </div>
                     
                     <div>
-                        <h3> LED 2 control: </h3>
+                        <p> LED 2 control: </p>
                             {% if led2 == 1 %}
                                 <a href ="/led2/off" class="button">OFF</a> 
                             {% else %}    
@@ -72,7 +72,7 @@
                     </div>
                     
                     <div>
-                        <h3> BUZZER control: </h3>
+                        <p> BUZZER control: </p>
                             {% if buzzer == 1 %}
                                 <a href ="/buzzer/off" class="button">OFF</a> 
                             {% else %}    
