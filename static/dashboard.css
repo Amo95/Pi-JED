@@ -5,9 +5,11 @@
 body{
     background: skyblue;
     text-align: center;
-    display: table-cell;
     vertical-align: middle;
     position: relative;
+    line-height: 24px;
+    margin: 0;
+    padding: 0;
 }
 
 .container {
