@@ -16,11 +16,16 @@ body{
     width: 75%;
     margin-left: auto;
     margin-right: auto;
-    padding: 0;
+    padding: 144px;
     text-align: center;
     vertical-align: middle;
     position: relative;
 }
+
+.stats {
+    margin-bottom: 5cm;
+}
+
 #header{
     width: 100%;
     height: 80px;
