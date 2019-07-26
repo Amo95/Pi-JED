@@ -5,6 +5,12 @@
 body{
     background: skyblue;
 }
+
+.container {
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+}
 #header{
     width: 100%;
     height: 80px;
