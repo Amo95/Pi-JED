@@ -4,13 +4,14 @@
 
             <title>Dashboard</title>
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
             <link rel="stylesheet" href="{{url_for('static', filename='dashboard.css')}}">
         </head>
         <body>
             <div id="header">
             <div id="logo"><img src="{{url_for('static', filename='pi.png')}}"/></div>
-            <div id="res_btn" onclick="show_hide_nav('navbar')" ><img src="{{url_for('static', filename='button.png')}}"/></div>
             <script type="text/javascript" src="{{url_for('static', filename='dashboard.js')}}"></script>
+            <div id="res_btn" onclick="show_hide_nav('navbar')" ><img src="{{url_for('static', filename='button.png')}}"/></div>
                 <ul id="navbar">
                     <li><a href="{{ url_for('index') }}">Home</a></li>
                     <li><a href="{{ url_for('logout') }}">Logout</a></li>
