@@ -1,7 +1,7 @@
 <!DOCTYPE html>
     <html>
         <head>
-            
+
             <title>Dashboard</title>
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <link rel="stylesheet" href="{{url_for('static', filename='dashboard.css')}}">
@@ -30,7 +30,7 @@
                            <!-- <style type="text/css">overflow:auto;</style> -->
                            <!-- <img src="/static/pi.png" width="50px" height="50px" alt="Phttp://05d21c34.ngrok.io/ledYellow/oni-JED"> -->
             <div class="container">
-                <div class="stats">
+                <div id="stats">
                     <h1>&nbspSTATUS</h1>
                         {% if led1 == 1 %}
                           <p style="color:green"><b>LED ONE: &nbsp ON</b></p>
@@ -53,7 +53,7 @@
       
                         {% endif %}
                 </div>
-                <div class="stats2">
+                <div id="stats2">
                     <h1>CONTROLLER</h1>
                         <p> LED 1 control: </p>
                             {% if led1 == 1 %}
@@ -61,18 +61,14 @@
                             {% else %}    
                                 <a href ="/led1/on" class="button">ON</a> 
                             {% endif %}
-                    </div>
                     
-                    <div class="stats3">
                         <p> LED 2 control: </p>
                             {% if led2 == 1 %}
                                 <a href ="/led2/off" class="button">OFF</a> 
                             {% else %}    
                                 <a href ="/led2/on" class="button">ON</a> 
                             {% endif %}
-                    </div>
-                    
-                    <div class="stats4">
+
                         <p> BUZZER control: </p>
                             {% if buzzer == 1 %}
                                 <a href ="/buzzer/off" class="button">OFF</a> 

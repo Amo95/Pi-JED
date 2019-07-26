@@ -22,22 +22,8 @@ body{
     position: relative;
 }
 
-.stats {
+#stats {
     margin: 3cm;
-}
-
-.stats .stats2 {
-    margin-top: 5px
-
-}
-
-.stats .stats3 {
-
-}
-
-.stats .stats4 {
-    margin-bottom: 2px;
-
 }
 
 #header{
