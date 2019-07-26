@@ -5,12 +5,12 @@
             <title>Dashboard</title>
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <link rel="stylesheet" href="{{url_for('static', filename='dashboard.css')}}">
-            <script type="text/javascript" src="{{url_for('static', filename='dashboard.js')}}"></script>
         </head>
         <body>
             <div id="header">
             <div id="logo"><img src="{{url_for('static', filename='pi.png')}}"/></div>
             <div id="res_btn" onclick="show_hide_nav('navbar')" ><img src="{{url_for('static', filename='button.png')}}"/></div>
+            <script type="text/javascript" src="{{url_for('static', filename='dashboard.js')}}"></script>
                 <ul id="navbar">
                     <li><a href="{{ url_for('index') }}">Home</a></li>
                     <li><a href="{{ url_for('logout') }}">Logout</a></li>
