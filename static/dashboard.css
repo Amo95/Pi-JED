@@ -152,14 +152,17 @@ li>a:focus{
 }
 @media screen and (max-width: 480px){
     #header{
+        width: 100%;
+        height: 60px;
         height: 0px;
     }
     #navbar{
         width:100%;
-        height: 50px;
-        margin: 0px auto;
+        height: 60px;
+        float: none;
+        /*margin: 0px auto;
         margin-top:-40px;
-        display: none;
+        display: none;*/
     }
     #navbar>li{
         float: none;
@@ -175,8 +178,11 @@ li>a:focus{
     }
     #res_btn{
         display: block;
+        color: white;
+        line-height: 60px;
         position: relative;
         top: -175px;
+        font-size: auto;
         cursor: pointer;
     }
 }
