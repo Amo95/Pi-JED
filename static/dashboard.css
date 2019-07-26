@@ -27,14 +27,16 @@ body{
 }
 
 .stats .stats2 {
+    margin-top: 5px
 
 }
 
-.stats3 {
+.stats .stats3 {
 
 }
 
-.stats4 {
+.stats .stats4 {
+    margin-bottom: 2px;
 
 }
 
