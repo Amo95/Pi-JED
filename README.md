@@ -1,8 +1,10 @@
 # Pi-JED
 
 @jameaamo@gmail.com
+
 @AJHakM3
 
+----------------------------
 
 Co-partners:
 
