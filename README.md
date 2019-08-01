@@ -1,6 +1,7 @@
 # Pi-JED
 
 Co-partners:
+
 Diana Blankson
 Enoch Sarpong
 
