@@ -1,5 +1,9 @@
 # Pi-JED
 
+Co-partners:
+Diana Blankson
+Enoch Sarpong
+
 @jameaamo@gmail.com
 @AJHakM3
 
