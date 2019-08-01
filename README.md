@@ -26,8 +26,10 @@ To keep the flask server started, type the following:
 Afterwards we have to create a database using sqlite3 to manage user data entries:
 
 4. from the terminal type ```"sqlite3 preferred_database_name.db"``` and press enter
-	in the sqlite3 cli type: 
+	in the sqlite3 cli type:
+	
 	```=>.table and press enter to create a user table...```
+	
 	 ```  => Then, type ".exit" to exit```
 
 5. Type, ```"python3"``` and press enter to enter into the python cli
