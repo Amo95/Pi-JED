@@ -24,6 +24,7 @@ To keep the flask server started, type the following:
 3. navigate to the Pi-JED directory by typing ```"cd route-to-folder/Pi-JED"``` and press enter
 
 Afterwards we have to create a database using sqlite3 to manage user data entries:
+
 4. from the terminal type ```"sqlite3 preferred_database_name.db"``` and press enter
 	in the sqlite3 cli type: 
 	```=>.table and press enter to create a user table...
