@@ -1,12 +1,14 @@
 # Pi-JED
 
+@jameaamo@gmail.com
+@AJHakM3
+
+
 Co-partners:
 
 Diana Blankson
-Enoch Sarpong
 
-@jameaamo@gmail.com
-@AJHakM3
+Enoch Sarpong
 
 # ----- Requirements -----
 
