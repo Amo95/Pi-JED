@@ -1,41 +1,25 @@
 # Pi-JED
 ### Contact Me
-```
+```bash
 Email: jameaamo@gmail.com
 Instagram: @dummycod3r
 Twitter: @dummyCod3r_
 ```
 
 Team members:
--Diana Blankson
--Enoch Sarpong
+Diana Blankson and Enoch Sarpong
+
 
 ### Install
 
 To start the flask server, type the following:
-
-
-1. Type ```"pip3 install -r requirements.txt"```
-
-2. then type ```"apt install sqlite3" and press Enter"```
-
-3. navigate to the Pi-JED directory by typing ```"cd route-to-folder/Pi-JED"``` and press enter
-
-Afterwards we have to create a database using sqlite3 to manage user data entries:
-
-4. from the terminal type ```"sqlite3 preferred_database_name.db"``` and press enter
-<<<<<<< HEAD
-	in the sqlite3 cli type: 
-
-	```=>.table and press enter to create a user table...
-	   => Then, type ".exit" to exit```
-=======
-	in the sqlite3 cli type:
-	
-	```=>.table and press enter to create a user table...```
-	
-	 ```  => Then, type ".exit" to exit```
->>>>>>> 85cdf47749c94a92c91d89d776147dd9ca00a016
+```bash
+git clone gigit@github.com:Amo95/Pi-JED.git
+cd ~/Pi-JED
+pip3 install -r requirements.txt
+apt-get install sqlite3
+Then create a database by typing from terminal, <'sqlite3 databasename'>. From the sqlite3 session type, create table and exit
+```
 
 5. Type, ```"python3"``` and press enter to enter into the python cli
 
