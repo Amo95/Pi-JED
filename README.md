@@ -19,15 +19,14 @@ cd ~/Pi-JED
 pip3 install -r requirements.txt
 apt-get install sqlite3
 Then create a database by typing from terminal, <'sqlite3 databasename'>. From the sqlite3 session type, create table and exit
+
+On terminal type 'python3' to enter into python's interactive session and type following
+from app import db
+db.create_all()
+exit() or Ctrl ^D
 ```
 
-5. Type, ```"python3"``` and press enter to enter into the python cli
-
-	```=> From the python3 cli, type "from app import db" and press enter
-	   => Then type, "db.create_all()" and press enter
-	   => Type "exit()" to exit the python3 cli```
-
-6. now you can start flask (python3 app.py)
-
-
-THANK YOU FOR TIME.... DOnt forget to comment issues regarding codes deployed in the project
+### Usage
+```bash
+To run the script type in 'python3 app.py'
+```
