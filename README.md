@@ -31,7 +31,5 @@ exit() or Ctrl ^D
 To run the script type in 'python3 app.py'
 ```
 
-### Note
-```bash
+#### Note
 This code works on raspberry pi <still fixing that>
-```
