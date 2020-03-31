@@ -1,20 +1,18 @@
 # Pi-JED
+### Contact Me
+```
+Email: jameaamo@gmail.com
+Instagram: @dummycod3r
+Twitter: @dummyCod3r_
+```
 
-@jameaamo@gmail.com
-
-@AJHakM3
-
-----------------------------
-
-Co-partners:
-
+Team members:
 -Diana Blankson
-
 -Enoch Sarpong
 
-# ----- Requirements -----
+### Install
 
-To keep the flask server started, type the following:
+To start the flask server, type the following:
 
 
 1. Type ```"pip3 install -r requirements.txt"```
